@@ -1,11 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View>
+        <Text style={styles.h1}>Welcome Back!</Text>
+      </View>
+      <View>
+        <TextInput style={styles.input}  placeholder="Enter Email"/>
+        <TextInput style={styles.input}  placeholder="Enter Passworld"/>
+        <Text style={styles.forget}>Forget password?</Text>
+      </View>
+      <View style={styles.button}>
+        <Button
+            title="Learn More"
+            color="#841584"
+            accessibilityLabel="Learn more about this purple button"
+        />
+      </View>
     </View>
   );
 }
@@ -17,4 +30,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  h1: {
+    textAlign: "center",
+    fontWeight: "bold"
+  },
+  input: {
+    height: 45,
+    width:255,
+    marginTop: 15,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderRadius: 15,
+    padding: 10,
+  },
+  forget: {
+    textAlign: "right"
+  },
+  button: {
+    borderRadius: 150,
+    width:255,
+  }
 });
