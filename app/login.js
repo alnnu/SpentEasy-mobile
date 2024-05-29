@@ -1,24 +1,22 @@
-import {View, Text, TextInput, Button, StyleSheet} from "react-native";
+import {View, Text, TextInput, Button, StyleSheet, SafeAreaView} from "react-native";
+
+import { Stack, useRouter } from "expo-router";
+
+
+import { COLORS } from "../constants";
+import LoginForm from "../components/login/loginForm";
+
 
 export default function Login ()  {
+    const router = useRouter();
+
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View>
                 <Text style={styles.h1}>Welcome Back!</Text>
             </View>
-            <View>
-                <TextInput style={styles.input}  placeholder="Enter Email"/>
-                <TextInput style={styles.input}  placeholder="Enter Passworld"/>
-                <Text style={styles.forget}>Forget password?</Text>
-            </View>
-            <View style={styles.button}>
-                <Button
-                    title="Learn More"
-                    color="#841584"
-                    accessibilityLabel="Learn more about this purple button"
-                />
-            </View>
-        </View>
+            <LoginForm/>
+        </SafeAreaView>
     )
 }
 
@@ -40,12 +38,13 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         borderWidth: 1,
         borderRadius: 15,
-        padding: 10,
+        padding: 10
     },
     forget: {
         textAlign: "right"
     },
     button: {
+        backgroundColor: COLORS.primary,
         borderRadius: 150,
         width:255,
     }
