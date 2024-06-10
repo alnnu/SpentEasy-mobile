@@ -26,7 +26,12 @@ export const LoginFormStyle = StyleSheet.create({
     },
     button: {
         backgroundColor: COLORS.primary,
-        borderRadius: 150,
+        alignItems: "center",
+
         width:255,
+        paddingTop: 10,
+        paddingBottom: 10,
+        borderRadius: 15,
+        marginTop: 50
     }
 });
