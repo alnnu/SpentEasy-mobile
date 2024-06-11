@@ -1,11 +1,10 @@
-import {Button, Text, TextInput, TouchableOpacity, View} from "react-native";
-import {LoginFormStyle} from "./loginForm.style";
+import {Text, TextInput, TouchableOpacity, View} from "react-native";
+import {LoginFormStyle} from "./styles/loginForm.style";
 import {useState} from "react";
 
 export default function LoginForm() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState("")
-    const [display, setDisplay] = useState(false)
     return (
         <>
             <View>
@@ -25,7 +24,7 @@ export default function LoginForm() {
                     }}
                     style={LoginFormStyle.button}
                 >
-                    <Text >title</Text>
+                    <Text style={LoginFormStyle.buttonText}>sign in</Text>
                 </TouchableOpacity>
             </View>
 

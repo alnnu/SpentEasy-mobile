@@ -1,10 +1,11 @@
-import {View, Text, TextInput, Button, StyleSheet, SafeAreaView} from "react-native";
+import { StyleSheet, SafeAreaView} from "react-native";
 
 import { Stack, useRouter } from "expo-router";
 
 
-import { COLORS } from "../constants";
 import LoginForm from "../components/login/loginForm";
+import WelcomeText from "../components/login/WelcomeText";
+import SignupText from "../components/login/SignupText";
 
 
 export default function Login ()  {
@@ -12,10 +13,9 @@ export default function Login ()  {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View>
-                <Text style={styles.h1}>Welcome Back!</Text>
-            </View>
+            <WelcomeText/>
             <LoginForm/>
+            <SignupText/>
         </SafeAreaView>
     )
 }
@@ -26,26 +26,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    h1: {
-        textAlign: "center",
-        fontWeight: "bold"
-    },
-    input: {
-        height: 45,
-        width:255,
-        marginTop: 15,
-        marginBottom: 10,
-        borderWidth: 1,
-        borderRadius: 15,
-        padding: 10
-    },
-    forget: {
-        textAlign: "right"
-    },
-    button: {
-        backgroundColor: COLORS.primary,
-        borderRadius: 150,
-        width:255,
     }
 });

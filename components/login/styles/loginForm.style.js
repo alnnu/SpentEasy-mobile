@@ -1,5 +1,5 @@
 import {StyleSheet} from "react-native";
-import {COLORS} from "../../constants";
+import {COLORS} from "../../../constants";
 
 export const LoginFormStyle = StyleSheet.create({
     container: {
@@ -29,9 +29,12 @@ export const LoginFormStyle = StyleSheet.create({
         alignItems: "center",
 
         width:255,
-        paddingTop: 10,
-        paddingBottom: 10,
+        paddingTop: 12,
+        paddingBottom: 12,
         borderRadius: 15,
         marginTop: 50
+    },
+    buttonText: {
+        color: 'white'
     }
 });
