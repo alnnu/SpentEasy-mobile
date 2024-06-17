@@ -1,6 +1,6 @@
 import {Slot} from "expo-router";
 
-const RootLayout = () => {
+const AuthLayout = () => {
 
     return (
         <>
@@ -10,4 +10,4 @@ const RootLayout = () => {
 }
 
 
-export default RootLayout
+export default AuthLayout
